@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <h1>Bank Dkzxxy</h1>
+    <center>
+    <table style="background: skyblue;">
+        <tr>
+            <td>Setor Tunai</td>
+            <td><input type="number" min="50000" id="st" placeholder="Min Rp. 50.000"></td>
+            <td>Jumlah Setor </td>
+            <td><input type="number" id="jumlah1"></td>
+            <td><input type="button" value=" Setor" onclick="t()" id="setor"></td>
+        </tr>
+        <tr>
+            <td>Tarik Tunai</td>
+            <td><input type="number" min="50000" id="tt" placeholder="Min Rp. 50.000"></td>
+            <td>Jumlah Tarik</td>
+            <td><input type="number" id="jumlah2"></td>
+            <td><input type="button" value=" tarik " onclick="t()" id="tarik"></td>
+        </tr>
+        <tr>
+            <td>Nabung</td>
+            <td><input type="number" id="n" placeholder="Masukan Nominal"></td>
+            <td>Jumlah Nabung</td>
+            <td><input type="number" id="jumlah3"></td>
+            <td><input type="button" value="Nabung" onclick="t()" id="nabung"></td>
+        </tr>
+        <tr>
+            <td>Saldo</td>
+            <td><input type="number" id="s" name="A" disabled></td>
+        </tr>
+    </table></center>
+    <script>
+        function t(){
+            //setor
+            var js = document.getElementById("jumlah1").value;
+            var saldo = document.getElementById("s").value;
+            var setor = document.getElementById("st").value;
+            var menyetor = setor * js;
+
+            //tarik
+            var jt = document.getElementById("jumlah2").value;
+            var tarik = document.getElementById("tt").value;
+            var menarik = tarik * jt;
+
+            //nabung
+            var jn = document.getElementById("jumlah3").value;
+            var nabung = document.getElementById("n").value;
+            var saldo = document.getElementById("s").value;
+            var menabung = nabung * jn;
+
+            //output
+            var gabung = menyetor + menabung - menarik;
+            document.getElementById("s").value = gabung;
+        }
+    </script>
+</body>
+</html>

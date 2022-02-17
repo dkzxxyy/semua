@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>persegipanjang, segitga, liungkaran</title>
+</head>
+
+<body>
+    <script>
+        function persegipanjang(panjang, lebar){
+            let jumlah = panjang * lebar;
+            document.writeln(`luas persegi panjang dari lebar${lebar} dan panjang ${panjang} adalah ${jumlah} <br>`)
+        }
+
+         function lingkaran(jarijari) {
+                let jumlah = jarijari * jarijari * 3.14;
+                document.writeln(`luas lingkaran dari jarijari${jarijari} adalah ${jumlah}<br>`)
+        }
+
+          function segitiga(alas, tinggi) {
+                let jumlah = alas * tinggi/2;
+                document.writeln(`luas segitga dari alas${alas} dan tinggi ${tinggi} adalah ${jumlah}<br>`)
+        }
+
+
+        persegipanjang(5,10);
+        lingkaran(10);
+        segitiga(15,20);
+
+    </script>
+</body>
+</html>
